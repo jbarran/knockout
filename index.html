@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Knockout Demo</title>
+    <!-- ✅ Load Knockout before your script -->
+    <script src="./knockout.js"></script>
+  </head>
+  <body>
+    <h2 data-bind="text: greeting"></h2>
+    <input data-bind="value: greeting" />
+
+    <!-- ✅ Your script runs after Knockout is loaded -->
+    <script>
+      function AppViewModel() {
+        this.greeting = ko.observable("Hello from KO");
+      }
+
+      ko.applyBindings(new AppViewModel());
+    </script>
+  </body>
+</html>
